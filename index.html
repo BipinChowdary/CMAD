@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Showcase</title>
+    <link rel="icon" href="images/ping.png" type="image/icon type" />
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <canvas id="neural-network"></canvas>
+    <div class="container">
+      <div class="name">
+        <a href="https://bipinchowdary.github.io/" target="_blank"
+          >Bipin Chowdary</a
+        >
+      </div>
+
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </div>
+
+      <h1 class="main-title glass-effect">
+        Crowd Management and Anomaly Detection
+      </h1>
+
+      <div class="section">
+        <div class="info">
+          <h2>INFO</h2>
+          <p>
+            It is common for CCTV operators to overlook inter- esting events
+            taking place within the crowd due to large number of people in the
+            crowded scene (i.e. marathon, rally). Thus, there is a dire need to
+            automate the detection of salient crowd regions acquiring immediate
+            attention for a more effective and proactive surveillance. This
+            paper proposes a novel framework to identify and localize salient
+            regions in a crowd scene, by transforming low-level features
+            extracted from crowd motion field into a global similarity
+            structure. The global similarity structure representation allows the
+            discovery of the intrinsic manifold of the motion dynamics, which
+            could not be captured by the low-level representation. Ranking is
+            then performed on the global similarity structure to identify a set
+            of extrema. The proposed approach is unsupervised so learning stage
+            is eliminated. Experimental results on public datasets demonstrates
+            the effectiveness of exploiting such extrema in identifying salient
+            regions in various crowd scenarios that exhibit crowding, local
+            irregular motion, and unique motion areas such as sources and sinks.
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>Idea</h2>
+
+          <div class="image-container glass-effect">
+            <img
+              src="images/info.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>Related Work</h2>
+          <p>
+            Existing methods can be divided into two main approaches. The first
+            approach analyzes crowd behaviors or activities based on the motion
+            of individuals, where tracking of their trajectories is required.
+            Commonly, the tracking approaches keep track of each individual
+            motion and further apply a statistical model of the trajectories to
+            identify the semantics or geometric structures of the scene, such as
+            the walking paths, sources and sinks. Then, the learned semantics
+            are compared to the query trajectories to detect anomaly. While in
+            principle individuals should be tracked from the time they enter a
+            scene, till the time they exit the scene to infer such semantics, it
+            is inevitable that tracking tends to fail due to occlusion, clutter
+            background and irregular motion in the crowded scenes. Therefore,
+            the aforementioned methods work well, up to a certain extent, in
+            sparse crowd scenes. They tend to fail in dense crowd scenes, where
+            target tracking is extremely challenging.
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>Detection and Localization</h2>
+
+          <div class="image-container glass-effect">
+            <img
+              src="images/work.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>PROPOSED FRAMEWORK</h2>
+          <p>A. Crowd Motion Field</p>
+          <div class="image-container glass-effect">
+            <img
+              src="images/21.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+          <p>B. Feature Representation</p>
+          <div class="image-container glass-effect">
+            <img
+              src="images/22.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+            <img
+              src="images/23.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+          <p>C. Saliency Detection by Manifold Ranking</p>
+          <div class="image-container glass-effect">
+            <img
+              src="images/24.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>
+            <div class="section">
+              <div class="info">
+                <h2>EXPERIMENTS</h2>
+                <p>
+                  We used the benchmark datasets obtained from data to evaluate
+                  the proposed framework. The sequences are diverse,
+                  representing dense crowd in the public spaces
+                </p>
+                <div class="image-container glass-effect">
+                  <img
+                    src="images/frame.png"
+                    alt="Gradient Based Algorithm Illustration"
+                  />
+                </div>
+              </div>
+            </div>
+          </h2>
+          <p>
+            various scenarios such as pilgrimage, station, marathon, rallies and
+            stadium. In addition, the sequences have different field of views,
+            resolutions, and exhibit a multitude of motion behaviors that cover
+            both the obvious and subtle instabilities.
+          </p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>A. Qualitative Analysis</h2>
+          <p>
+            Instability Detection: A set of two sequences comprising a
+            pilgrimage and marathon scenes were used to test the capa- bility of
+            the proposed system in detecting instability. Following the studies,
+            we introduced synthetic noise into the 2 sequences to simulate the
+            unstable region as enclosed in the blue bounding box shown in Fig. 3
+            and the red box in Fig. 4, respectively. We observe that all three
+            methods ( [9], [10] and ours) are able to identify the unstable
+            region. However, in addition to the synthetic noise, our proposed
+            method is able to identify other regions that exhibit unique motion
+            dynamics as highlighted by the colored regions. After scrutinizing
+            our results, we notice that these areas correspond to the exit and
+            turning point around the Kaaba in Fig. 3, where there is potential
+            slowdown in the pace of individuals, thus resulting in salient
+            motion dynamics within these regions. Similarly, the proposed method
+            is able to detect the sink region in the marathon sequence in Fig.
+            4, where the crowd exit from the field of view. The results
+            demonstrate the effectiveness of the global similarity structure in
+            capturing the intrinsic structure of the crowd motion.
+          </p>
+          <div class="image-container glass-effect">
+            <img
+              src="images/quant.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>B. Quantitative Analysis</h2>
+          <p>
+            We compared our detections against manually labeled in- teresting
+            regions from all the sequences obtained from the public datasets.
+            Most of the related studies [9], [10], merely provide qualitative
+            results and the implementations are not shared publicly; leading to
+            difficulties in performing a compre- hensive evaluation
+            quantitatively. We determined the regions with interesting motion
+            dynamics as per video basis and we employed the F-measure according
+            to the score measurement of the well-known PASCAL challenge. That
+            is, if the detected region overlaps the ground truth region by more
+            than 50%, then the detection is considered as the correct salient
+            region.
+          </p>
+          <div class="image-container glass-effect">
+            <img
+              src="images/quli.png"
+              alt="Gradient Based Algorithm Illustration"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>Expected Results and Possible Outcome</h2>
+
+          <div class="video-container glass-effect">
+            <video width="100%" autoplay muted loop controls>
+              <source src="images/crowd.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="info">
+          <h2>CONCLUSION</h2>
+          <p>
+            We have demonstrated that the transformation of the low-level flow
+            field descriptors, stability and phase changes, into the global
+            similarity structure, is an effective indicator for salient motion
+            dynamics and irregularities in the crowded scenes. In particular,
+            experimental results have shown that the method is effective in
+            detecting sources and sinks, crowding, and local irregular motions
+            from various surveillance scenar- ios. Importantly, accurate
+            detection is achieved in the crowded scenes without tracking, prior
+            information or model learning. Though the manifold projection is
+            capable of discovering intrinsic structure of the motion dynamics,
+            the basis of our manifold is optical flow. Thus, it is limited by
+            the known drawbacks of optical flow estimation. Future investigation
+            includes identifying low-level features that are more robust towards
+            characterising motion in extremely crowded scenes.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-text">
+        Project By
+        <a
+          href="https://www.linkedin.com/in/bipin-chowdary8055/"
+          target="_blank"
+          >Bipin Chowdary</a
+        >
+        All rights reserved till <span class="bow" id="hidden-icon">⋈</span>
+      </div>
+      <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
